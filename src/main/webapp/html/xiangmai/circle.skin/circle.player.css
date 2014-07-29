@@ -1,0 +1,191 @@
+/*
+ * Project: CirclePlayer
+ * http://www.jplayer.org
+ *
+ * Copyright (c) 2012 Happyworm Ltd
+ *
+ * Author: Silvia Benvenuti
+ * Edited by: Mark J Panaghiston
+ * Date: 2nd October 2012
+ * Artwork inspired by: http://forrst.com/posts/Untitled-CJz
+ */
+
+.cp-container {
+	position:relative;
+	width:170px; /* 200 - (2 * 48) */
+	height:170px;
+	margin: 126px auto 0px auto;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+.cp-container :focus {
+	border:none;
+	outline:0;
+}
+
+.cp-buffer-1,
+.cp-buffer-2,
+.cp-progress-1,
+.cp-progress-2 {
+	position:absolute;
+	top:0;
+	left:0;
+	width:170px;
+	height:170px;
+	clip:rect(0px,85px,170px,0px);
+
+	-moz-border-radius:85px;
+	-webkit-border-radius:85px;
+	border-radius:85px;
+}
+
+.cp-buffer-1,
+.cp-buffer-2 {
+	background:url("buffer.png") 0 0 no-repeat;
+}
+
+
+/* FALLBACK for .progress
+ * (24 steps starting from 1hr filled progress, Decrease second value by 104px for next step)
+ * (It needs the container selector to work. Or use div)
+ */
+
+.cp-container .cp-fallback {
+	background:url("progress_sprite.jpg") no-repeat;
+	background-position:0 170px; 
+}
+
+.cp-progress-1,
+.cp-progress-2 {
+	background:url("progress.png") 0 0 no-repeat;
+}
+
+.cp-buffer-holder,
+.cp-progress-holder,
+.cp-circle-control {
+	position:absolute;
+	width:170px;
+	height:170px;
+} 
+
+.cp-circle-control {
+	cursor:pointer;
+}
+
+.cp-buffer-holder,
+.cp-progress-holder {
+	clip:rect(0px,170px,170px,85px);
+	display:none;
+}
+
+
+/* This is needed when progress is greater than 50% or for fallback */
+
+.cp-buffer-holder.cp-gt50,
+.cp-progress-holder.cp-gt50,
+.cp-progress-1.cp-fallback{
+	clip:rect(auto, auto, auto, auto);
+}
+
+.cp-controls {
+	 position: absolute;
+	width: 126px;
+	 height: 126px; 
+	 border-radius: 63px;
+	 top: 22px;
+	 left: 22px;
+	
+}
+
+.cp-controls li{
+	list-style-type:none;
+	display:block;
+
+	/*IE Fix*/
+	position:absolute;
+	
+	
+	
+
+}
+@-webkit-keyframes rotate{from{-webkit-transform: rotate(0deg)}
+to{-webkit-transform: rotate(360deg)}
+}
+@-moz-keyframes rotate{from{-moz-transform: rotate(0deg)}
+to{-moz-transform: rotate(359deg)}
+}
+@-o-keyframes rotate{from{-o-transform: rotate(0deg)}
+to{-o-transform: rotate(359deg)}
+}
+@keyframes rotate{from{transform: rotate(0deg)}
+to{transform: rotate(359deg)}
+}
+@-webkit-keyframes rotate2{from{-webkit-transform: rotate(0deg)}
+to{-webkit-transform: rotate(360deg)}
+}
+@-moz-keyframes rotate2{from{-moz-transform: rotate(0deg)}
+to{-moz-transform: rotate(359deg)}
+}
+@-o-keyframes rotate2{from{-o-transform: rotate(0deg)}
+to{-o-transform: rotate(359deg)}
+}
+@keyframes rotate2{from{transform: rotate(0deg)}
+to{transform: rotate(359deg)}
+}
+.cp-avatar-bg{ 
+		position: absolute;
+		width: 126px;
+	 height: 126px; 
+	 border-radius: 63px;
+	 top: 22px;
+	 left: 22px;
+	 background-color: rgba(0,0,0,0.2) ;
+	 z-index: 10
+	}
+.cp-avatar{ 
+	position: absolute;
+	width: 126px;
+	 height: 126px; 
+	 border-radius: 63px;
+	 top: 22px;
+	 left: 22px;
+	  z-index: 5;
+ -webkit-transition-property: -webkit-transform;-webkit-transition-duration: 1s;-moz-transition-property: -moz-transform;-moz-transition-duration: 1s;-webkit-animation: rotate 4s linear infinite;-moz-animation: rotate 4s linear infinite;-o-animation: rotate 4s linear infinite;animation: rotate 4s linear infinite;
+
+	}
+
+.cp-avatar img{width: 126px;
+	 height: 126px; 
+	 border-radius: 63px;
+
+	}
+.cp-controls li a{
+	position:absolute;
+	display:block;
+	width:32px;
+	height:38px;
+	text-indent:-9999px;
+	z-index:11;
+	cursor:pointer;
+
+}
+
+.cp-controls .cp-play {
+	left: 51px;
+	top: 42px;
+	background:url("controls.png") 0 0 no-repeat;
+}
+
+
+.cp-controls .cp-pause {
+	background:url("controls.png") 0 -38px no-repeat;
+	left: 49px;
+	top: 45px;
+}
+
+
+
+.cp-jplayer {
+	width:0;
+	height:0;
+}

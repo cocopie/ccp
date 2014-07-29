@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="css/animations.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+
+<body>
+    <section class="first-screen">
+        <div class="nine-icon">
+            <img src="images/9.png" alt="">
+        </div>
+        <div class="list-wapper clearfix">
+            <div class="list-title"></div>
+            <div class="arr pull-right"></div>
+        </div>
+
+    </section>
+
+    <section class="list">
+        <div class="img">
+            <a href="index.html"><img src="1.png"></a>
+        </div>
+        <div class="img">
+            <a href="index-boy.html"><img src="2.png"></a>
+        </div>
+        <div class="img">
+            <a href="index.html"><img src="3.png"></a>
+        </div>
+        <div class="img">
+            <a href="index.html"><img src="1.png"></a>
+        </div>
+        <div class="img">
+            <a href="index.html"><img src="2.png"></a>
+        </div>
+        <div class="img">
+            <a href="index-boy.html"><img src="3.png"></a>
+        </div>
+        <div class="img">
+            <a href="index-boy.html"><img src="1.png"></a>
+        </div>
+        <div class="img">
+            <a href="index-boy.html"><img src="2.png"></a>
+        </div>
+        <div class="img">
+            <a href="index-boy.html"><img src="3.png"></a>
+        </div>
+    </section>
+    <script src="js/jquery.1.7.2.min.js" type="text/javascript"></script>
+    <script src="js/jquery.mobile.custom.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        $('.nine-icon').addClass("animated fadeInLeft");
+        $('.list-wapper').addClass("animated fadeInRight");
+        $(".first-screen").swipe({
+            swipeUp: function(event, direction, distance, duration) {
+                $('.first-screen').fadeOut();
+                $('.list').show()
+                $('.img').each(function() {
+                    var _this = $(this)
+                    var _index = $(this).index()
+                    setTimeout(function() {
+                        _this.addClass("animated bounceInUp");
+                    }, 200 * _index)
+                });
+            },
+            threshold:30
+        });
+        $(".list").swipe({
+            swipeDown: function(event, direction, distance, duration) {
+                $('.first-screen').show();
+                $('.list').fadeOut()
+               
+            },
+            threshold:30
+        });
+
+       
+
+    });
+    </script>
+</body>
+
+</html>

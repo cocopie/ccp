@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../boy/css/style.css">
+    <script src="../../js/jquery.1.7.2.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../../js/jquery.transform2d.js"></script>
+
+    <script type="text/javascript" src="../../js/jquery.grab.js"></script>
+    <script type="text/javascript" src="../../js/jquery.jplayer.js"></script>
+    <script type="text/javascript" src="../../js/mod.csstransforms.min.js"></script>
+    <script type="text/javascript" src="../../js/circle.player.js"></script>
+</head>
+
+<body class="body-bg">
+    <section class="first-screen">
+        <div class="anchor-main text-center">
+            <div class="anchor-name">
+                <span>彩虹气囊按摩梳子</span>
+            </div>
+            <div class="anchor-name-2">
+                <span>Cocopie主播</span>
+            </div>
+        </div>
+        <div id="jquery_jplayer_1" class="cp-jplayer"></div>
+        <div id="cp_container_1" class="cp-container">
+
+            <div class="cp-buffer-holder">
+                <div class="cp-buffer-1"></div>
+                <div class="cp-buffer-2"></div>
+            </div>
+            <div class="cp-progress-holder">
+                <div class="cp-progress-1"></div>
+                <div class="cp-progress-2"></div>
+            </div>
+            <div class="cp-avatar ">
+                <img src="../../pic/pic.png" alt="">
+            </div>
+            <div class="cp-avatar-bg"></div>
+            <div id="start"></div>
+            <div class="jp-duration text-center">00:00</div>
+            <ul class="cp-controls">
+                <li><a class="cp-play" tabindex="1">play</a>
+                </li>
+                <li><a class="cp-pause" style="display:none;" tabindex="1">pause</a>
+                </li>
+            </ul>
+
+        </div>
+        <div class="page-number">
+            <div class="play-number pull-left text-right">
+                <p>播放数</p>
+                <div class="number-style">3500</div>
+            </div>
+            <div class="sell-number pull-left">
+                <p>月销量</p>
+                <div class="number-style">68</div>
+            </div>
+        </div>
+        <div class="arr"></div>
+    </section>
+
+    </div>
+    <section class="sec-screen">
+        <div class="product-img">
+            <img src="pic/1.jpg">
+        </div>
+        <div class="product-title">
+            <div class="en-name">Eye candy</div>
+            <div class="zh-name">彩虹梳子气囊按摩顺发梳子</div>
+        </div>
+        <div class="product-price">89
+            <span>元/条</span>
+        </div>
+        <div class="product-intro" id="intro">
+            <div class="product-intro-item clearfix">
+                <div class="product-intro-name pull-left">品牌名称：</div>
+                <div class="product-intro-info pull-left">Eye candy</div>
+            </div>
+            <div class="product-intro-item clearfix">
+                <span class="product-intro-name pull-left">产品功效：</span>
+                <span class="product-intro-info pull-left">按摩头皮、柔顺发质、防静电</span>
+            </div>
+            <div class="product-intro-item clearfix">
+                <span class="product-intro-name pull-left">适用人群：</span>
+                <span class="product-intro-info pull-left">任何发质</span>
+            </div>
+            <div class="product-intro-item clearfix">
+                <span class="product-intro-name pull-left">产品规格：</span>
+                <span class="product-intro-info pull-left">长度150mm</span>
+            </div>
+            <div class="product-intro-item clearfix">
+                <span class="product-intro-name pull-left">生产地区：</span>
+                <span class="product-intro-info pull-left">韩国</span>
+            </div>
+            <div class="product-intro-item clearfix">
+                <span class="product-intro-name pull-left">产品材质：</span>
+                <span class="product-intro-info pull-left">环保塑料梳体，超弹聚酯纤维梳齿</span>
+            </div>
+            <div class="product-intro-item clearfix">
+                <span class="product-intro-name pull-left">特别说明：</span>
+                <span class="product-intro-info pull-left">专用S型梳齿设计，带气垫，防静电，防打结，体积小</span>
+            </div>
+        </div>
+        <div class="product-comment-title" id="comment">
+            <div class="comment-title-1">买家评价</div>
+            <div class="comment-title-2">Customer Reviews</div>
+        </div>
+        <div class="comment-intro">
+            <div class="comment-item clearfix">
+                <img src="pic/2.jpg" class="pull-left user-avatar">
+                <div class="comment-right ">
+                    <h4 class="user-name">yangqian11053233</h4>
+                    <p class="comment-detail">拿到手就梳了来，嘻嘻，很喜欢噢。
+                    </p>
+                </div>
+            </div>
+            <div class="comment-item clearfix">
+                <img src="pic/3.jpg" class="pull-left user-avatar">
+                <div class="comment-right ">
+                    <h4 class="user-name">苏麻离青1023</h4>
+                    <p class="comment-detail">迷你的，很可爱
+                    </p>
+                </div>
+            </div>
+            <div class="comment-item clearfix">
+                <img src="pic/4.jpg" class="pull-left user-avatar">
+                <div class="comment-right ">
+                    <h4 class="user-name">appla</h4>
+                    <p class="comment-detail">小巧、漂亮、发货快！
+                    </p>
+                </div>
+            </div>
+            <div class="comment-item clearfix">
+                <img src="pic/5.jpg" class="pull-left user-avatar">
+                <div class="comment-right ">
+                    <h4 class="user-name">然后log</h4>
+                    <p class="comment-detail">好可爱的梳子
+                    </p>
+                </div>
+            </div>
+            <div class="comment-item clearfix">
+                <img src="pic/6.jpg" class="pull-left user-avatar">
+                <div class="comment-right ">
+                    <h4 class="user-name">sally</h4>
+                    <p class="comment-detail">好看
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <div class="btn-wapper">
+            <a href="#" class="buy-btn">带 我 回 家</a>
+            <div class="brid"></div>
+            <div class="music-note" id="music-1">
+                <img src="../../girl/images/r1.png">
+            </div>
+            <div class="music-note" id="music-2">
+                <img src="../../girl/images/r2.png">
+            </div>
+            <div class="music-note" id="music-3">
+                <img src="../../girl/images/r3.png">
+            </div>
+            <div class="music-note" id="music-4">
+                <img src="../../girl/images/r1.png">
+            </div>
+            <div class="music-note" id="music-5">
+                <img src="../../girl/images/r2.png">
+            </div>
+            <div class="music-note" id="music-6">
+                <img src="../../girl/images/r3.png">
+            </div>
+        </div>
+        <div class="product-comment-title mt25">
+            <div class="comment-title-1">更多商品推荐</div>
+            <div class="comment-title-2">More product recommend</div>
+        </div>
+        <div class="product-intro clearfix">
+            <div class="col-list pull-left text-center">
+                <a href="#">
+                    <img src="../../pic/7.png">
+                </a>
+            </div>
+            <div class="col-list pull-left text-center">
+                <a href="#">
+                    <img src="../../pic/7.png">
+                </a>
+            </div>
+            <div class="col-list pull-left text-center">
+                <a href="#">
+                    <img src="../../pic/7.png">
+                </a>
+            </div>
+        </div>
+        <div class="back-list text-right">
+            <a href="list.html">返回商品列表</a>
+        </div>
+    </section>
+    <section class="quick-navbar">
+        <a href="list.html" class="go-list">列表</a>
+        <a class="q-play">播放</a>
+        <a class="q-pause hide">暂停</a> 
+    </section>
+    <script type="text/javascript">
+    $(function() {
+        var commentFlag,introFlag;
+        var introTop = $('#intro').offset().top
+        var commentTop = $('#comment').offset().top
+        $(window).scroll(function(event) {
+            if ($(this).scrollTop() >= introTop) {
+                if (!introFlag) {
+                    console.log('到属性了')
+                    introFlag = true
+                }
+            }
+            if ($(this).scrollTop() >= commentTop) {
+                if (!commentFlag) {
+                    console.log('到评价了')
+                    commentFlag = true
+                }
+            }
+        });
+        var _height = $(window).height()
+        $('.first-screen').height(_height)
+
+        var myCirclePlayer = new CirclePlayer("#jquery_jplayer_1", {
+            mp3: "48.mp3"
+        }, {
+            cssSelectorAncestor: "#cp_container_1",
+        });
+
+        $('.cp-play').click(function(event) {
+            $('.cp-avatar').removeClass('cp-avatar-stop')
+            $('.q-pause').removeClass('hide')
+            $('.q-play').addClass('hide')
+
+        });
+        $('.cp-pause').click(function(event) {
+            $('.cp-avatar').addClass('cp-avatar-stop')
+            $('.q-pause').addClass('hide')
+            $('.q-play').removeClass('hide')
+        });
+        $('.q-play').click(function(event) {
+            myCirclePlayer.play()
+            $('.q-pause').removeClass('hide')
+            $('.q-play').addClass('hide')
+        });
+        $('.q-pause').click(function(event) {
+            myCirclePlayer.pause()
+            $('.q-pause').addClass('hide')
+            $('.q-play').removeClass('hide')
+        });
+    });
+    </script>
+
+</body>
+
+</html>
