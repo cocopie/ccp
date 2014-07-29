@@ -72,7 +72,7 @@
     			cookie.setPath("/");
     			response.addCookie(cookie);
     		    
-    			//System.out.println("set cookie Ok !");
+    			//System.out.println("set cookie Ok !")1;
     		}
     	%>
    
